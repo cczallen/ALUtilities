@@ -10,7 +10,7 @@
 #import "Utilities.h"
 
 UIKIT_EXTERN NSString *NSStringFromInt(NSInteger num)	{
-	NSString * strNum = [NSString stringWithFormat:@"%i",num];
+	NSString * strNum = [NSString stringWithFormat:@"%li",(long)num];
 	return strNum;
 }
 
