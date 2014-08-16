@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 # Source Info
   s.platform     =  :ios, '6.0'
   s.source       =  { :git => 'https://github.com/cczallen/ALUtilities.git', :tag => s.version.to_s }
-  s.source_files = 'ALUtilities/*.{h,m}'
+  s.source_files = 'ALUtilities/ALUtilities/*.{h,m}'
 
   s.requires_arc = true
   
