@@ -1,13 +1,13 @@
 //
-//  Utilities.m
-//  EasyIPhotoViewer
+//  ALUtilities.m
+//  ALUtilities
 //
-//  Created by ALLENMAC on 2014/3/21.
+//  Created by ALLENMAC on 2014/6/23.
 //  Copyright (c) 2014年 AllenLee. All rights reserved.
 //
 
 
-#import "Utilities.h"
+#import "ALUtilities.h"
 
 UIKIT_EXTERN NSString *NSStringFromInt(NSInteger num)	{
 	NSString * strNum = [NSString stringWithFormat:@"%li",(long)num];

@@ -22,7 +22,7 @@
 		9737E16F195817F40076EABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9737E14E195817F40076EABA /* UIKit.framework */; };
 		9737E177195817F40076EABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9737E175195817F40076EABA /* InfoPlist.strings */; };
 		9737E179195817F40076EABA /* ALUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9737E178195817F40076EABA /* ALUtilitiesTests.m */; };
-		9737E185195818180076EABA /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9737E184195818180076EABA /* Utilities.m */; };
+		97F18785199F470100251F35 /* ALUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F18784199F470100251F35 /* ALUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 		9737E174195817F40076EABA /* ALUtilitiesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALUtilitiesTests-Info.plist"; sourceTree = "<group>"; };
 		9737E176195817F40076EABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9737E178195817F40076EABA /* ALUtilitiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALUtilitiesTests.m; sourceTree = "<group>"; };
-		9737E183195818180076EABA /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		9737E184195818180076EABA /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		97F18783199F470100251F35 /* ALUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUtilities.h; sourceTree = "<group>"; };
+		97F18784199F470100251F35 /* ALUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 		9737E150195817F40076EABA /* ALUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				9737E182195818180076EABA /* Utilities */,
+				97F18782199F470100251F35 /* ALUtilities */,
 				9737E159195817F40076EABA /* AppDelegate.h */,
 				9737E15A195817F40076EABA /* AppDelegate.m */,
 				9737E15C195817F40076EABA /* Main_iPhone.storyboard */,
@@ -159,13 +159,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9737E182195818180076EABA /* Utilities */ = {
+		97F18782199F470100251F35 /* ALUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				9737E183195818180076EABA /* Utilities.h */,
-				9737E184195818180076EABA /* Utilities.m */,
+				97F18783199F470100251F35 /* ALUtilities.h */,
+				97F18784199F470100251F35 /* ALUtilities.m */,
 			);
-			path = Utilities;
+			path = ALUtilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9737E164195817F40076EABA /* ViewController.m in Sources */,
+				97F18785199F470100251F35 /* ALUtilities.m in Sources */,
 				9737E15B195817F40076EABA /* AppDelegate.m in Sources */,
-				9737E185195818180076EABA /* Utilities.m in Sources */,
 				9737E157195817F40076EABA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +484,7 @@
 				9737E17E195817F40076EABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9737E17F195817F40076EABA /* Build configuration list for PBXNativeTarget "ALUtilitiesTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +493,7 @@
 				9737E181195817F40076EABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

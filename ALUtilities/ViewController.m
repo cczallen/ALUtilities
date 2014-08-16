@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ALUtilities.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	repeat(5, ^(size_t i) {
+		NSLog(@"LOG:  i: %li",i);
+	});
+//	[NSString stringWithFormat:@"%@", ];
 }
 
 - (void)didReceiveMemoryWarning

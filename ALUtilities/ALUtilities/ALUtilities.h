@@ -1,5 +1,5 @@
 //
-//  Utilities.h
+//  ALUtilities.h
 //  ALUtilities
 //
 //  Created by ALLENMAC on 2014/6/23.
@@ -38,7 +38,7 @@ UIKIT_EXTERN NSString *NSStringFromFloat(CGFloat num);
 								fprintf(stderr, "<%s : %d> %s\n",                                           \
 								[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
 								__LINE__, __func__);                                                        \
-								(NSLog)((format), ##__VA_ARGS__);                                           \
+								fprintf(stderr, "%s\n" ,[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String]);                                           \
 								fprintf(stderr, "-------\n");                                               \
 								} while (0)
 
