@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = 'ALUtilities'
   s.version      = '1.0.0'
-  s.license      =  :type => 'MIT'
+  s.license      =  { :type => 'MIT' }
   s.homepage     = 'https://github.com/cczallen/ALUtilities'
-  s.authors      =  'Allen Lee' => 'cczallen@gmail.com'
+  s.authors      =  { 'Allen Lee' => 'cczallen@gmail.com' }
   s.summary      = 'iOS useful utilities by AL'
 
 # Source Info
