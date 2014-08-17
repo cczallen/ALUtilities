@@ -130,6 +130,8 @@ UIKIT_EXTERN NSString *NSStringFromFloat(float num);
 -(void)moveToNewOrigin:(CGPoint)newOrigin;
 -(void)setFrameSameAsSuperView;
 -(void)setFrameIntegral;
+-(CGFloat)getTotalXFrom:(UIView *)view;
+-(CGFloat)getTotalYFrom:(UIView *)view;
 
 -(void)addSubviewAtTheSamePlaceTo:(UIView *)view;
 
