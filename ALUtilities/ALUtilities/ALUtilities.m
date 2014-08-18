@@ -184,7 +184,7 @@ static NSString *defaultStroyboardName = @"Main";
 }
 + (instancetype)creatViewControllerByStoryboardID:(NSString *)stroyboardID andStoryboardName:(NSString *)stroyboardName	{
 	UIStoryboard * mainStroyboard = [UIStoryboard storyboardWithName:stroyboardName bundle:nil];
-	UIViewController * VC = [mainStroyboard instantiateViewControllerWithIdentifier:stroyboardID];
+	id VC = [mainStroyboard instantiateViewControllerWithIdentifier:stroyboardID];
 	return VC;
 }
 
@@ -393,7 +393,7 @@ static NSString *defaultStroyboardName = @"Main";
 //
 -(instancetype)findNearestScrollView	{
 	
-	UIScrollView * scrollView = [self findNearestScrollViewStartFrom:self];
+	id scrollView = [self findNearestScrollViewStartFrom:self];
 	
 	return scrollView;
 }

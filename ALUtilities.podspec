@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ALUtilities'
-  s.version      = '1.0.1'
+  s.version      = '1.0.2'
   s.license      =  { :type => 'MIT' }
   s.homepage     = 'https://github.com/cczallen/ALUtilities'
   s.authors      =  { 'Allen Lee' => 'cczallen@gmail.com' }
