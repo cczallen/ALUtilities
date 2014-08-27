@@ -190,6 +190,18 @@ UIKIT_EXTERN NSString *NSStringFromFloat(float num);
 
 //---------------------------
 #pragma mark -
+@interface NSArray (Unicode)
+- (NSString*)description;
+@end
+
+@interface NSDictionary (Unicode)
+- (NSString*)description;
+@end
+
+
+
+//---------------------------
+#pragma mark -
 @interface NSDictionary (SortedKeys)
 - (NSArray *)sortedKeys;
 - (NSArray *)sortedKeysByDescending;

@@ -625,6 +625,39 @@ static NSTimeInterval CAAnimDuraion = 0.0;
 
 
 //---------------------------
+static int indentLevelForLog = 0;		//for NSArray log
+
+@implementation NSArray (Unicode)
+- (NSString*)description
+{
+    NSMutableString* __weak desc = [NSMutableString stringWithString:@"(\n"];
+	indentLevelForLog++;
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [desc appendFormat:@"	%@,\n",[obj description]];
+    }];
+	indentLevelForLog--;
+	
+	for (int i=0; i<indentLevelForLog; i++)		[desc appendString:@"	"];
+    [desc appendString:@")"];
+    return desc;
+}
+@end
+
+@implementation NSDictionary (Unicode)
+- (NSString*)description
+{
+    NSMutableString* desc __weak = [NSMutableString stringWithString:@"{\n"];
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [desc appendFormat:@"%@ = %@,\n",key,[obj description]];
+    }];
+    [desc appendString:@"}"];
+    return desc;
+}
+@end
+
+
+
+//---------------------------
 #pragma mark -
 @implementation NSDictionary (SortedKeys)
 - (NSArray *)sortedKeys	{
