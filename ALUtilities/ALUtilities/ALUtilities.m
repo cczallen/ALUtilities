@@ -630,7 +630,7 @@ static int indentLevelForLog = 0;		//for NSArray log
 @implementation NSArray (Unicode)
 - (NSString*)description
 {
-    NSMutableString* __weak desc = [NSMutableString stringWithString:@"(\n"];
+    NSMutableString *desc = [NSMutableString stringWithString:@"(\n"];
 	indentLevelForLog++;
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [desc appendFormat:@"	%@,\n",[obj description]];
@@ -646,7 +646,7 @@ static int indentLevelForLog = 0;		//for NSArray log
 @implementation NSDictionary (Unicode)
 - (NSString*)description
 {
-    NSMutableString* desc __weak = [NSMutableString stringWithString:@"{\n"];
+    NSMutableString *desc = [NSMutableString stringWithString:@"{\n"];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [desc appendFormat:@"%@ = %@,\n",key,[obj description]];
     }];
