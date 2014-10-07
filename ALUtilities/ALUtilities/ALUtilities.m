@@ -118,7 +118,7 @@ void repeatConcurrentlyWithCompletion(size_t iterations, RepeatBlock block, void
 			isAllNumeric = NO;
 		}
 	}
-	NSLog(@"LOG: %@ isAllNumeric: %@", str ,(isAllNumeric)? @"YES":@"NO" );
+//	NSLog(@"LOG: %@ isAllNumeric: %@", str ,(isAllNumeric)? @"YES":@"NO" );
 	if (isAllNumeric) {
 		return YES;
 	}else	{
@@ -135,7 +135,7 @@ void repeatConcurrentlyWithCompletion(size_t iterations, RepeatBlock block, void
 			isAllAlphabetic = NO;
 		}
 	}
-	NSLog(@"LOG:  isAllAlphabetic: %@",(isAllAlphabetic)? @"YES":@"NO" );
+//	NSLog(@"LOG:  isAllAlphabetic: %@",(isAllAlphabetic)? @"YES":@"NO" );
 	if (isAllAlphabetic) {
 		return YES;
 	}else	{
@@ -745,7 +745,7 @@ static int indentLevelForLog = 0;		//for NSArray log
 		for (int i = 0; i<11; i++) {
 			num += [[strPID substringWithRange:NSMakeRange(i, 1)] intValue] * checkNumbers[i];
 		}
-		NSLog(@"LOG:  num: %i",num);
+//		NSLog(@"LOG:  num: %i",num);
 		if ( (num %10) == 0) {
 			isPID_OK = YES;
 		}
@@ -768,7 +768,7 @@ static int indentLevelForLog = 0;		//for NSArray log
 			tmp = tmp%10;	//只取個位數
 			num += tmp;
 		}
-		NSLog(@"LOG:  num: %i",num);
+//		NSLog(@"LOG:  num: %i",num);
 		num = num%10;
 		if (num !=0) {
 			num = 10 -num;
