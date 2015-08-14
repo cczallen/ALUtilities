@@ -33,14 +33,19 @@
 //---------------------------
 #pragma mark - Better NSLog
 #ifndef __OPTIMIZE__
-	//A better version of NSLog	//http://onevcat.com/2014/01/black-magic-in-macro/
-	#define NSLog(format, ...) do {                                                                             \
-									fprintf(stderr, "<%s : %d> %s\n",                                           \
-									[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
-									__LINE__, __func__);                                                        \
-									fprintf(stderr, "%s\n" ,[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String]);                                           \
-									fprintf(stderr, "-------\n");                                               \
-									} while (0)
+#    //A better version of NSLog	//http://onevcat.com/2014/01/black-magic-in-macro/
+#    define NSLog(format, ...) do {		dispatch_queue_t lockQueue = dispatch_queue_create("com.log.LockQueue", NULL); \
+         dispatch_sync(lockQueue, ^{                                                                           \
+             fprintf(stderr, "<%s : %d> %s %s\n\n",                                           \
+                 [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+                    __LINE__, __func__, ([NSThread isMainThread])? "":"\nisMainThread:NO");                                                        \
+                 fprintf(stderr, "%s\n" ,[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String]);                                           \
+                 fprintf(stderr, "\n────────────────────────────────────────────────────────────\n");                                               \
+     }); } while (0)
+//Alternate Separators
+//┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+//────────────────────────────────────────────────────────────
+//------------------------------------------------------------
 #else
 #    define NSLog(...) {}
 #endif
