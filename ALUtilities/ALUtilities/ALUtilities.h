@@ -78,10 +78,10 @@ void repeatConcurrentlyWithCompletion(size_t iterations, RepeatBlock block, void
 #pragma mark -
 #define SafeStr(x) ((x==nil)?@"":[NSString stringWithFormat:@"%@" , x])
 
-UIKIT_EXTERN NSString *NSStringFromNSInteger(NSInteger num);
-UIKIT_EXTERN NSString *NSStringFromLong(long num);
-UIKIT_EXTERN NSString *NSStringFromInt(int num);
-UIKIT_EXTERN NSString *NSStringFromFloat(float num);
+NSString *NSStringFromNSInteger(NSInteger num);
+NSString *NSStringFromLong(long num);
+NSString *NSStringFromInt(int num);
+NSString *NSStringFromFloat(float num);
 
 //---------------------------
 
