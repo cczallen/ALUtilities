@@ -862,7 +862,7 @@ static int indentLevelForLog = 0;		//for NSArray log
 @end
 
 @implementation NSString (jsonDic)
-- (instancetype)jsonDic	{	//NSDictionary * or NSArray *
+- (id)jsonDic	{	//NSDictionary * or NSArray *
 	NSError * err;
 	id jsonDic = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:(NSJSONReadingAllowFragments) error:&err];
 	if (!jsonDic || err) {

@@ -251,7 +251,7 @@ NSString *NSStringFromFloat(float num);
 @end
 
 @interface NSString (jsonDic)
-- (instancetype)jsonDic;	//NSDictionary * or NSArray *
+- (id)jsonDic;	//NSDictionary * or NSArray *
 @end
 
 @interface NSData (NSDataToUTF8String)
